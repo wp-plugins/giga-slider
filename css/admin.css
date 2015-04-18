@@ -1,0 +1,196 @@
+
+.cleaner{
+	clear: both;
+}
+/* begin form */
+#misc-publishing-actions, #minor-publishing-actions {
+	display:none;
+}
+.form-group{
+	padding: 10px 5px;
+	border-bottom: solid 1px #DDDDDD;
+}
+.form-group.last{
+	border: none;
+}
+.form-group.slide{
+	padding: 2px 5px;
+	border: none;
+}
+.form-group.lastSlide{
+	padding: 2px 5px;
+	border-bottom: solid 1px #DDDDDD;
+}
+.form-group label{
+	display: block;
+}
+.label{
+	font-weight: bold;
+}
+.colorPicker{
+	width:30px;
+	height:30px;
+	margin:5px;
+	border: 1px solid white;
+}
+span.note{
+	display: block;
+	font-size: 12px;
+	color: #999999;
+}
+/* end form */
+
+/* begin slides */
+.collapsible-panel{
+	width: 100%;
+	margin: 5px;
+}
+.collapsible-panel div.header{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	margin:0;
+	padding: 5px;
+	border: solid 1px #E5E5E5;
+	cursor: move;
+	text-align: left;
+}
+.collapsible-panel div.header span.delete{
+	display: block;
+	float: right;
+	height: 100%;
+	width: 17px;
+	cursor: pointer;
+	background: url(../images/delete_16.png) no-repeat right center;
+}
+.collapsible-panel div.header span.icon{
+	display: block;
+	float: left;
+	height: 100%;
+	width: 35px;
+}
+.collapsible-panel div.header span.icon.image{
+	background: url(../images/image_16.png) no-repeat 10px center;
+}
+.collapsible-panel div.header span.icon.vimeo{
+	background: url(../images/vimeo_16.png) no-repeat 10px center;
+}
+.collapsible-panel div.header span.icon.youtube{
+	background: url(../images/youtube_16.png) no-repeat 10px center;
+}
+.collapsible-panel div.body{
+	margin:0;
+	padding: 10px;
+	border: solid 1px #E5E5E5;
+	background-color: #F7F7F7;
+	min-height: 200px;
+}
+
+.form_container, .image_container{
+	float: left;
+	width: 47%
+}
+/* end slides */
+
+/* begin image */
+div.image_container{
+	padding: 20px;
+}
+
+div.image_container div.image_holder{
+	margin-top: 30px;
+	height: 300px;
+}
+
+/* end image */
+
+/* begin thumbnails */
+div.camera_thumbs_cont{
+	/*background-color: #FF0000;*/
+}
+/* end thumbnails */
+
+/* camera caption link inherits important styles */
+.camera_caption a{
+	padding: 0 !important;
+	margin: 0 !important;
+	background: transparent !important;
+	font-size: inherit !important;
+	color: inherit !important;
+	text-decoration: inherit !important;
+	opacity: inherit !important;
+	filter: inherit !important;
+}
+.camera_caption a:link, .camera_caption a:visited, .camera_caption a:hover, .camera_caption a:active{
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
+
+.label.value{
+	color: #386CC1;
+}
+
+.rc-slider{
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+img.camera_thumb.extraLarge{
+	width: 150px !important;
+	height: 110px !important;
+}
+img.camera_thumb.large{
+	width: 125px !important;
+	height: 90px !important;
+}
+img.camera_thumb.medium{
+	width: 100px !important;
+	height: 75px !important;
+}
+img.camera_thumb.small{
+	width: 75px !important;
+	height: 50px !important;
+}
+img.camera_thumb.extraSmall{
+	width: 50px !important;
+	height: 35px !important;
+}
+
+div.watermark_container{
+	padding: 20px;
+}
+
+div.watermark_container div.watermark_holder{
+	margin-top: 30px;
+	height: 10s0px;
+}
+
+a.deleteWatermark{
+	color: #FF0000;
+	text-decoration: none;
+}
+a.deleteWatermark:hover{
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+/* begin caption example */
+div.captionExampleCont{
+	min-height: 150px;
+	background: url(../images/transparent.png) repeat;
+	margin-top: 0px;
+	padding: 10px;	
+}
+
+div.captionExample{
+	min-height: none;
+	min-width: none;
+}
+/* end caption example */
+
+
