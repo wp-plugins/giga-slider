@@ -1,46 +1,20 @@
 <?php
 	
 	$rcs_skin_colors = array('camera_graphite_skin' => 'graphite', 'camera_amber_skin' => 'amber', 'camera_ash_skin' => 'ash', 'camera_azure_skin' => 'azure',
-						'camera_beige_skin' => 'beige', 'camera_black_skin' => 'black', 'camera_blue_skin' => 'blue', 'camera_brown_skin' => 'brown',
-						'camera_burgundy_skin' => 'burgundy', 'camera_charcoal_skin' => 'charcoal', 'camera_chocolate_skin' => 'chocolate',
-						'camera_coffee_skin' => 'coffee', 'camera_cyan_skin' => 'cyan', 'camera_fuchsia_skin' => 'fuchsia', 'camera_gold_skin' => 'gold',
-						'camera_green_skin' => 'green', 'camera_grey_skin' => 'grey', 'camera_indigo_skin' => 'indigo', 'camera_khaki_skin' => 'khaki',
-						'camera_lime_skin' => 'lime', 'camera_magenta_skin' => 'magenta', 'camera_maroon_skin' => 'maroon', 'camera_orange_skin' => 'orange',
-						'camera_olive_skin' => 'olive', 'camera_pink_skin' => 'pink', 'camera_pistachio_skin' => 'pistachio', 'camera_red_skin' => 'red',
-						'camera_tangerine_skin' => 'tangerine', 'camera_turquoise_skin' => 'turquoise', 'camera_violet_skin' => 'violet',
-						'camera_white_skin' => 'white', 'camera_yellow_skin' => 'yellow');
+						'camera_beige_skin' => 'beige');
 						
 	$rcs_easing_features = array('linear' => 'liner', 'swing' => 'swing', 'easeInQuad' => 'ease in quad', 'easeOutQuad' => 'ease out quad',
 							'easeInOutQuad' => 'ease in out quad', 'easeInCubic' => 'ease in cubic', 'easeOutCubic' => 'ease out cubic',
-							'easeInOutCubic' => 'ease in out cubic', 'easeInQuart' => 'ease in quart', 'easeOutQuart' => 'ease out quart',
-							'easeInOutQuart' => 'ease in out quart', 'easeInQuint' => 'ease in quint', 'easeOutQuint' => 'ease out quint',
-							'easeInOutQuint' => 'ease in out quint', 'easeInExpo' => 'ease in expo', 'easeOutExpo' => 'ease out expo',
-							'easeInOutExpo' => 'ease in out expo', 'easeInSine' => 'ease in sine', 'easeOutSine' => 'ease out sine',
-							'easeInOutSine' => 'ease in out sine', 'easeInCirc' => 'ease in circ', 'easeOutCirc' => 'ease out circ',
-							'easeInOutCirc' => 'ease in out circ', 'easeInElastic' => 'ease in elastic', 'easeOutElastic' => 'ease out elastic',
-							'easeInOutElastic' => 'ease in out elastic', 'easeInBack' => 'ease in back', 'easeOutBack' => 'ease out back',
-							'easeInOutBack' => 'ease in out back', 'easeInBounce' => 'ease in bounce', 'easeOutBounce' => 'ease out bounce');
+							'easeInOutCubic' => 'ease in out cubic');
 					
 	$rcs_fx_features = array('random' => 'random', 'simpleFade' => 'simple fade', 'curtainTopLeft' => 'curtain top left', 'curtainTopRight' => 'curtain top right',
 						'curtainBottomLeft' => 'curtain bottom left', 'curtainBottomRight' => 'curtain bottom right', 'curtainSliceLeft' => 'curtain slice left',
 						'curtainSliceRight' => 'curtain slice right', 'blindCurtainTopLeft' => 'blind curtain top left',
-						'blindCurtainTopRight' => 'blind curtain top right', 'blindCurtainBottomLeft' => 'blind curtain bottom left',
-						'blindCurtainBottomRight' => 'blind curtain bottom right', 'blindCurtainSliceBottom' => 'blind curtain slice bottom',
-						'blindCurtainSliceTop' => 'blind curtain slice top', 'stampede' => 'stampede', 'mosaic' => 'mosaic',
-						'mosaicReverse' => 'mosaic reverse', 'mosaicRandom' => 'mosaic random', 'mosaicSpiral' => 'mosaic spiral',
-						'mosaicSpiralReverse' => 'mosaic spiral reverse', 'topLeftBottomRight' => 'top left bottom right',
-						'bottomRightTopLeft' => 'bottom right top left', 'bottomLeftTopRight' => 'bottom left top right',
-						'scrollLeft' => 'scroll left', 'scrollRight' => 'scroll right', 'scrollHorz' => 'scroll horz',
-						'scrollBottom' => 'scroll bottom', 'scrollTop' => 'scroll top');
+						'blindCurtainTopRight' => 'blind curtain top right', 'blindCurtainBottomLeft' => 'blind curtain bottom left');
 					
 	$rcs_slide_fx = array('random' => 'random', 'simpleFade' => 'simple fade', 'curtainTopLeft' => 'curtain top left', 'curtainTopRight' => 'curtain top right',
 							'curtainBottomLeft' => 'curtain bottom left', 'curtainBottomRight' => 'curtain bottom right', 'curtainSliceLeft' => 'curtainSliceLeft',
-							'curtainSliceRight' => 'curtain slice right', 'blindCurtainTopLeft' => 'blind curtain top left', 'blindCurtainTopRight' => 'blind curtain top right',
-							'blindCurtainBottomLeft' => 'blind curtain bottom left', 'blindCurtainBottomRight' => 'blind curtain bottom right',
-							'blindCurtainSliceBottom' => 'blind curtain slice bottom', 'blindCurtainSliceTop' => 'blind curtain slice top', 'stampede' => 'stampede',
-							'mosaic' => 'mosaic', 'mosaicReverse' => 'mosaic reverse', 'mosaicRandom' => 'mosaic random', 'mosaicSpiral' => 'mosaic spiral',
-							'mosaicSpiralReverse' => 'mosaic spiral reverse', 'topLeftBottomRight' => 'top left bottom right', 'bottomRightTopLeft' => 'bottom right top left',
-							'bottomLeftTopRight' => 'bottom left top right');
+							'curtainSliceRight' => 'curtain slice right', 'blindCurtainTopLeft' => 'blind curtain top left');
 
 	$rcs_alignments = array('topLeft' => 'top left', 'topCenter' => 'top center', 'topRight' => 'top right', 'centerLeft' => 'center left',
 						'center' => 'center', 'centerRight' => 'center right', 'bottomLeft' => 'bottom left', 'bottomCenter' => 'bottom center',

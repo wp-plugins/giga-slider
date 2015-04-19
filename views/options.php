@@ -174,22 +174,7 @@
 	<?php _e('Pause on click', 'rc_slider') ?></label>
 </div>
 
-<div class="watermark_container">
-	<button type="button" class="button-secondary" id="add_watermark" 
-	onclick="rcs_addWatermark()"><?php _e('Add watermark', 'rc_slider') ?></button>
-	
-	<div class="watermark_holder" id="watermark_holder">
-		<input type="hidden" name="options[watermark_id]" id="watermark_id" value="<?php echo $watermark_id ?>" />
-			<?php if(!empty($watermark_id)){
-					$img = wp_get_attachment_image_src($watermark_id, 'large');
-			?>
-			<img src="<?php echo $img[0] ?>" id="watermark" />
-			<?php } ?>
-	</div>
-	
-	<a href="javascript:rcs_deleteWatermark()" id="deleteWatermark" class="deleteWatermark" 
-	style="display: <?php echo (!empty($watermark_id))? 'block' : 'none'; ?>"><?php _e('remove watermark', 'rc_slider') ?></a>
-</div>
+
 <br />
 <input type="hidden" name="__rc_slider_form" value="<?php echo uniqid() ?>" />
 <input type="hidden" id="imageEditorGoal" value="" />

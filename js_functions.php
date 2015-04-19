@@ -19,15 +19,14 @@ function rcs_addNewSlide(){
 		'<div class="collapsible-panel">' +
 			'<div class="header"><span class="icon image colapsingToggle">&nbsp;</span><span class="colapsingToggle">Slide</span>' +
 			'<span class="delete" onclick="rcs_removeSlide(' + i + ', event)">&nbsp;</span></div>' +
-			'<div class="body"><span style="color:red">Note : you will need to upgrade to pro version to enable youtube, Vimeo, caption & others options..</span>' +
+			'<div class="body">' +
 				'<input type="hidden" name="slides[' + i + '][order]" id="slides_order_' + i + '" value="' + o + '" />' +
 				'<div class="form-group">' +
 					'<label class="label" for="slides_type_' + i + '"><?php _e('Type', 'rc_slider') ?></label></th>' +
 					'<select style="width: 200px;" name="slides[' + i + '][type]" id="slides_type_' + i + '" ' +
 					'onchange="rcs_slideTypeChange(this)">' +
 						'<option value="image" ><?php _e('Image', 'rc_slider') ?></option>' +
-						'<option value="youtube" disabled="disabled"><?php _e('YouTube', 'rc_slider') ?></option>' +
-						'<option value="vimeo" disabled="disabled"><?php _e('Vimeo', 'rc_slider') ?></option>' +
+						
 					'</select>' +
 				'</div>' +
 				'<br />' +
@@ -46,47 +45,7 @@ function rcs_addNewSlide(){
 							?>
 							'</select>' +
 						'</div>' +
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('URL', 'rc_slider') ?></label>' +
-							'<input class="widefat" disabled="disabled" type="text" name="slides[' + i + '][url]" id="slides_url_' + i + '" />' +
-						'</div>' +
-						'<div class="form-group lastSlide">' +
-							'<label class="label" for="slides_target_' + i + '"><?php _e('Open link in', 'rc_slider') ?></label></th>' +
-							'<select disabled="disabled" class="widefat" name="slides[' + i + '][target]" id="slides_target_' + i + '">' +
-								'<option value="_self"><?php _e('Same window', 'rc_slider') ?></option>' +
-								'<option value="_blank"><?php _e('New tab', 'rc_slider') ?></option>' +
-							'</select>' +
-						'</div>' +
-						'<br /><br />' +
 						
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('Caption', 'rc_slider') ?></label>' +
-							'<input disabled="disabled" class="widefat" type="text" name="slides[' + i + '][caption]" id="slides_caption_' + i + '" />' +
-						'</div>' +
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('Caption URL', 'rc_slider') ?></label>' +
-							'<input disabled="disabled" class="widefat" type="text" name="slides[' + i + '][caption_url]" id="slides_caption_url_' + i + '" ' +
-							'value="" />' +
-						'</div>' +
-						'<div class="form-group slide">' +
-							'<label class="label" for="slides_caption_url_target_' + i + '"><?php _e('Open link in', 'rc_slider') ?></label></th>' +
-							'<select disabled="disabled" class="widefat" name="slides[' + i + '][caption_url_target]" id="slides_caption_url_target_' + i + '">' +
-								'<option value="_self"><?php _e('Same window', 'rc_slider') ?></option>' +
-								'<option value="_blank"><?php _e('New tab', 'rc_slider') ?></option>' +
-							'</select>' +
-						'</div>' +
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('Caption custom CSS', 'rc_slider') ?></label>' +
-							'<textarea disabled="disabled" class="widefat" rows="2" name="slides[' + i + '][caption_css]" id="slides_caption_css_' + i + '" ' +
-							' placeholder="example: color: #FF2B52; font-size: 32px; padding: 10px; text-decoration: none;"></textarea>' +
-						'</div>' +
-						'<div class="form-group lastSlide">' +
-							'<label class="label"><?php _e('Use style template', 'rc_slider') ?></label></th>' +
-							'<select disabled="disabled" class="widefat slides_style_template" id="slides_style_template_' + i + '">' +
-							captionClasses +
-							'</select>' +
-						'</div>' +
-						'<br /><br />' +
 						'<div class="form-group slide">' +
 							'<label>' +
 							'<input type="checkbox" name="slides[' + i + '][default_effects]" id="slides_default_effects_' + i + '" value="1" ' +
@@ -141,33 +100,12 @@ function rcs_addNewSlide(){
 						'<div class="image_holder" id="image_holder_' + i + '">' +
 							'<input type="hidden" name="slides[' + i + '][image_id]" id="slides_image_id_' + i + '" />' +
 						'</div>' +
-						'<span class="note"><?php _e('click the reviewer to fresh after editing caption CSS', 'rc_slider') ?></span>' +
-						'<div id="slideCaptionExampleCon_' + i + '" class="captionExampleCont">' +
-							'<div id="slideCaptionExample_' + i + '" class="captionExample large_white_redBG">example</div>' +
-						'</div>' +
+						
+						
 					'</div>' +
 					'<div class="cleaner"></div>' +
 					'</div>' +
-				'<div class="container" id="youtube_container_' + i + '" style="display: none">' +
-					'<div class="form_container">' +
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('YouTube url or video id', 'rc_slider') ?></label>' +
-							'<input class="widefat" type="text" name="slides[' + i + '][youtube_id]" ' +
-							'id="slides_youtube_id_' + i + '" />' +
-						'</div>' +
-					'</div>' +
-					'<div class="cleaner"></div>' +
-				'</div>' +
-				'<div class="container" id="vimeo_container_' + i + '" style="display: none">' +
-					'<div class="form_container">' +
-						'<div class="form-group slide">' +
-							'<label class="label"><?php _e('Vimeo url or video id', 'rc_slider') ?></label>' +
-							'<input class="widefat" type="text" name="slides[' + i + '][vimeo_id]" ' +
-							'id="slides_vimeo_id_' + i + '" />' +
-						'</div>' +
-					'</div>' +
-					'<div class="cleaner"></div>' +
-				'</div>' +
+				
 			'</div>' +
 		'</div>' +
 		'<div class="cleaner"></div>' +

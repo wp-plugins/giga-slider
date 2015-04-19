@@ -49,15 +49,13 @@ $captionClasses = rcs_get_caption_example_options();
 			<div class="header"><span class="icon <?php echo $iconClass ?> colapsingToggle">&nbsp;</span><span class="colapsingToggle"><?php echo $title ?></span>
 			<span class="delete" onclick="rcs_removeSlide(<?php echo $i ?>, event)">&nbsp;</span></div>
 			<div class="body">
-			<span style="color:red">Note : you'll need to upgrade to pro version to enable youtube, Vimeo, caption & others options..</span>
 				<input type="hidden" name="slides[<?php echo $i ?>][order]" id="slides_order_<?php echo $i ?>" value="<?php echo $o ?>" />
 				<div class="form-group">
 					<label class="label" for="slides_type_<?php echo $i ?>"><?php _e('Type', 'rc_slider') ?></label></th>
 					<select style="width: 200px;" name="slides[<?php echo $i ?>][type]" id="slides_type_<?php echo $i ?>" 
 					onchange="rcs_slideTypeChange(this)">
 						<option value="image" <?php selected($type, 'image') ?>><?php _e('Image', 'rc_slider') ?></option>
-						<option value="youtube" disabled="disabled" <?php selected($type, 'youtube') ?>><?php _e('YouTube', 'rc_slider') ?></option>
-						<option value="vimeo" disabled="disabled" <?php selected($type, 'vimeo') ?>><?php _e('Vimeo', 'rc_slider') ?></option>
+						
 					</select>
 				</div>
 				<br />
@@ -66,67 +64,8 @@ $captionClasses = rcs_get_caption_example_options();
 				<div class="container" style="display: <?php echo (($type == 'image')? 'block' : 'none') ?>;" 
 				id="image_container_<?php echo $i ?>">
 					<div class="form_container">
-						<div class="form-group slide">
-							<label class="label" for="slides_alignment_<?php echo $i ?>"><?php _e('Alignment', 'rc_slider') ?></label></th>
-							<select class="widefat" name="slides[<?php echo $i ?>][alignment]" id="slides_alignment_<?php echo $i ?>">
-								<option value="">...</option>
-							<?php
-							foreach($rcs_alignments as $key => $val){
-							?>
-								<option value="<?php echo $key ?>" <?php selected($alignment, $key) ?> ><?php echo $val ?></option>
-							<?php
-							}
-							?>
-							</select>
-						</div>
 						
-						<div class="form-group slide">
-							<label class="label"><?php _e('URL', 'rc_slider') ?></label>
-							<input class="widefat" disabled="disabled" type="text" name="slides[<?php echo $i ?>][url]" id="slides_url_<?php echo $i ?>" 
-							value="<?php echo $url ?>" />
-						</div>
 						
-						<div class="form-group lastSlide">
-							<label class="label" for="slides_target_<?php echo $i ?>"><?php _e('Open link in', 'rc_slider') ?></label></th>
-							<select class="widefat" disabled="disabled" name="slides[<?php echo $i ?>][target]" id="slides_target_<?php echo $i ?>">
-								<option value="_self" <?php selected($target, '_self') ?>><?php _e('Same window', 'rc_slider') ?></option>
-								<option value="_blank" <?php selected($target, '_blank') ?>><?php _e('New tab', 'rc_slider') ?></option>
-							</select>
-						</div>
-						<br /><br />
-						
-						<div class="form-group slide">
-							<label class="label"><?php _e('Caption', 'rc_slider') ?></label>
-							<input class="widefat" disabled="disabled" type="text" name="slides[<?php echo $i ?>][caption]" id="slides_caption_<?php echo $i ?>" 
-							value="<?php echo $caption ?>" />
-						</div>
-						
-						<div class="form-group slide">
-							<label class="label"><?php _e('Caption URL', 'rc_slider') ?></label>
-							<input class="widefat" disabled="disabled" type="text" name="slides[<?php echo $i ?>][caption_url]" id="slides_caption_url_<?php echo $i ?>" 
-							value="<?php echo $caption_url ?>" />
-						</div>
-						
-						<div class="form-group slide">
-							<label class="label" for="slides_caption_url_target_<?php echo $i ?>"><?php _e('Open caption link in', 'rc_slider') ?></label></th>
-							<select class="widefat" disabled="disabled" name="slides[<?php echo $i ?>][caption_url_target]" id="slides_caption_url_target_<?php echo $i ?>">
-								<option value="_self" <?php selected($caption_url_target, '_self') ?>><?php _e('Same window', 'rc_slider') ?></option>
-								<option value="_blank" <?php selected($caption_url_target, '_blank') ?>><?php _e('New tab', 'rc_slider') ?></option>
-							</select>
-						</div>
-						
-						<div class="form-group slide">
-							<label class="label"><?php _e('Caption custom CSS', 'rc_slider') ?></label>
-							<textarea disabled="disabled" class="widefat slides_caption_css" rows="2" name="slides[<?php echo $i ?>][caption_css]" id="slides_caption_css_<?php echo $i ?>" 
-							placeholder="example: color: #FF2B52; font-size: 32px; padding: 10px; text-decoration: none;"><?php echo $caption_css ?></textarea>
-						</div>
-						
-						<div class="form-group lastSlide">
-							<label class="label"><?php _e('Use style template', 'rc_slider') ?></label></th>
-							<select disabled="disabled" class="widefat slides_style_template" id="slides_style_template_<?php echo $i ?>">
-							<?php echo $captionClasses ?>
-							</select>
-						</div>
 						<br /><br />
 						
 						<div class="form-group slide">
@@ -198,10 +137,7 @@ $captionClasses = rcs_get_caption_example_options();
 								<?php } ?>
 						</div>
 						
-						<span class="note"><?php _e('click the reviewer to fresh after editing caption CSS', 'rc_slider') ?></span>
-						<div id="slideCaptionExampleCon_<?php echo $i ?>" class="captionExampleCont">
-							<div id="slideCaptionExample_<?php echo $i ?>" class="captionExample" style="<?php echo $caption_css ?>">example</div>
-						</div>
+						
 					</div>
 					<!-- end image -->
 					
