@@ -19,15 +19,15 @@ function rcs_addNewSlide(){
 		'<div class="collapsible-panel">' +
 			'<div class="header"><span class="icon image colapsingToggle">&nbsp;</span><span class="colapsingToggle">Slide</span>' +
 			'<span class="delete" onclick="rcs_removeSlide(' + i + ', event)">&nbsp;</span></div>' +
-			'<div class="body">' +
+			'<div class="body"><span style="color:red">Note : you will need to upgrade to pro version to enable youtube, Vimeo, caption & others options..</span>' +
 				'<input type="hidden" name="slides[' + i + '][order]" id="slides_order_' + i + '" value="' + o + '" />' +
 				'<div class="form-group">' +
 					'<label class="label" for="slides_type_' + i + '"><?php _e('Type', 'rc_slider') ?></label></th>' +
 					'<select style="width: 200px;" name="slides[' + i + '][type]" id="slides_type_' + i + '" ' +
 					'onchange="rcs_slideTypeChange(this)">' +
 						'<option value="image" ><?php _e('Image', 'rc_slider') ?></option>' +
-						'<option value="youtube"><?php _e('YouTube', 'rc_slider') ?></option>' +
-						'<option value="vimeo"><?php _e('Vimeo', 'rc_slider') ?></option>' +
+						'<option value="youtube" disabled="disabled"><?php _e('YouTube', 'rc_slider') ?></option>' +
+						'<option value="vimeo" disabled="disabled"><?php _e('Vimeo', 'rc_slider') ?></option>' +
 					'</select>' +
 				'</div>' +
 				'<br />' +
@@ -48,11 +48,11 @@ function rcs_addNewSlide(){
 						'</div>' +
 						'<div class="form-group slide">' +
 							'<label class="label"><?php _e('URL', 'rc_slider') ?></label>' +
-							'<input class="widefat" type="text" name="slides[' + i + '][url]" id="slides_url_' + i + '" />' +
+							'<input class="widefat" disabled="disabled" type="text" name="slides[' + i + '][url]" id="slides_url_' + i + '" />' +
 						'</div>' +
 						'<div class="form-group lastSlide">' +
 							'<label class="label" for="slides_target_' + i + '"><?php _e('Open link in', 'rc_slider') ?></label></th>' +
-							'<select class="widefat" name="slides[' + i + '][target]" id="slides_target_' + i + '">' +
+							'<select disabled="disabled" class="widefat" name="slides[' + i + '][target]" id="slides_target_' + i + '">' +
 								'<option value="_self"><?php _e('Same window', 'rc_slider') ?></option>' +
 								'<option value="_blank"><?php _e('New tab', 'rc_slider') ?></option>' +
 							'</select>' +
@@ -61,28 +61,28 @@ function rcs_addNewSlide(){
 						
 						'<div class="form-group slide">' +
 							'<label class="label"><?php _e('Caption', 'rc_slider') ?></label>' +
-							'<input class="widefat" type="text" name="slides[' + i + '][caption]" id="slides_caption_' + i + '" />' +
+							'<input disabled="disabled" class="widefat" type="text" name="slides[' + i + '][caption]" id="slides_caption_' + i + '" />' +
 						'</div>' +
 						'<div class="form-group slide">' +
 							'<label class="label"><?php _e('Caption URL', 'rc_slider') ?></label>' +
-							'<input class="widefat" type="text" name="slides[' + i + '][caption_url]" id="slides_caption_url_' + i + '" ' +
+							'<input disabled="disabled" class="widefat" type="text" name="slides[' + i + '][caption_url]" id="slides_caption_url_' + i + '" ' +
 							'value="" />' +
 						'</div>' +
 						'<div class="form-group slide">' +
 							'<label class="label" for="slides_caption_url_target_' + i + '"><?php _e('Open link in', 'rc_slider') ?></label></th>' +
-							'<select class="widefat" name="slides[' + i + '][caption_url_target]" id="slides_caption_url_target_' + i + '">' +
+							'<select disabled="disabled" class="widefat" name="slides[' + i + '][caption_url_target]" id="slides_caption_url_target_' + i + '">' +
 								'<option value="_self"><?php _e('Same window', 'rc_slider') ?></option>' +
 								'<option value="_blank"><?php _e('New tab', 'rc_slider') ?></option>' +
 							'</select>' +
 						'</div>' +
 						'<div class="form-group slide">' +
 							'<label class="label"><?php _e('Caption custom CSS', 'rc_slider') ?></label>' +
-							'<textarea class="widefat" rows="2" name="slides[' + i + '][caption_css]" id="slides_caption_css_' + i + '" ' +
+							'<textarea disabled="disabled" class="widefat" rows="2" name="slides[' + i + '][caption_css]" id="slides_caption_css_' + i + '" ' +
 							' placeholder="example: color: #FF2B52; font-size: 32px; padding: 10px; text-decoration: none;"></textarea>' +
 						'</div>' +
 						'<div class="form-group lastSlide">' +
 							'<label class="label"><?php _e('Use style template', 'rc_slider') ?></label></th>' +
-							'<select class="widefat slides_style_template" id="slides_style_template_' + i + '">' +
+							'<select disabled="disabled" class="widefat slides_style_template" id="slides_style_template_' + i + '">' +
 							captionClasses +
 							'</select>' +
 						'</div>' +
