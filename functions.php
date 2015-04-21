@@ -1,6 +1,34 @@
 <?php
 
 /**
+ * to hook including scripts & styles to admin_enqueue_scripts, wp_enqueue_scripts at a very late order 
+ *
+ * @uses add_action()
+ *
+ * @return void
+ */
+function rcs_manage_enqueue(){
+	global $wp_filter;
+	
+	$adn_priority = 1;
+	if(isset($wp_filter['admin_enqueue_scripts'])){
+		foreach($wp_filter['admin_enqueue_scripts'] as $key => $val){
+			$adn_priority = ($key >= $adn_priority)? $key + 1 : $adn_priority;
+		}
+	}
+	
+	add_action('admin_enqueue_scripts', 'rcs_admin_styles_scripts', $adn_priority);
+	
+	$cln_priority = 1;
+	if(isset($wp_filter['wp_enqueue_scripts'])){
+		foreach($wp_filter['wp_enqueue_scripts'] as $key => $val){
+			$cln_priority = ($key >= $cln_priority)? $key + 1 : $cln_priority;
+		}
+	}
+	add_action('wp_enqueue_scripts', 'rcs_styles_scripts', $cln_priority);
+}
+//---------------------------------------------------
+/**
  * To enqueue scripts and styles in the admin pages and dequeue unwanted scripts from other plugins
  *
  * @uses wp_enqueue_style()
@@ -117,15 +145,40 @@ function rcs_styles_scripts(){
 	if(!in_array('jquery', $queuedScripts)){
 		wp_enqueue_script('jquery');
 	}
-	$cam_dep = array('jquery', 'jquery-mobile');
-	if(!in_array('jquery-effects-core', $queuedScripts)){
-		wp_enqueue_script('jquery-easing', plugins_url('lib/camera/scripts/jquery.easing.1.3.js', RCS_PLUGIN_MAIN_FILE), array('jquery'));
-		$cam_dep[] = 'jquery-easing';
-	} else{
-		$cam_dep[] = 'jquery-effects-core';
+	
+	if(!in_array('jquery-ui', $queuedScripts)){
+		if(!in_array('jquery-effects-core', $queuedScripts)){
+			wp_enqueue_script('jquery-effects-core');
+		}
+		
+		if(!in_array('jquery-ui-core', $queuedScripts)){
+			wp_enqueue_script('jquery-ui-core');
+		}
+		
+		if(!in_array('jquery-ui-widget', $queuedScripts)){
+			wp_enqueue_script('jquery-ui-widget');
+		}
+		
+		if(!in_array('jquery-ui-mouse', $queuedScripts)){
+			wp_enqueue_script('jquery-ui-mouse');
+		}
+		
+		if(!in_array('jquery-ui-slider', $queuedScripts)){
+			wp_enqueue_script('jquery-ui-slider');
+		}
+		
+		if(!in_array('jquery-ui-sortable', $queuedScripts)){
+			wp_enqueue_script('jquery-ui-sortable');
+		}
+	}
+		
+	if(!in_array('jquery-ui', $queuedScripts)){
+		if(!in_array('jquery-effects-core', $queuedScripts)){
+			wp_enqueue_script('jquery-effects-core');
+		}
 	}
 	wp_enqueue_script('jquery-mobile', plugins_url('lib/camera/scripts/jquery.mobile.customized.min.js', RCS_PLUGIN_MAIN_FILE), array('jquery'));
-	wp_enqueue_script('camera-js', plugins_url('lib/camera/scripts/camera.js', RCS_PLUGIN_MAIN_FILE), $cam_dep);
+	wp_enqueue_script('camera-js', plugins_url('lib/camera/scripts/camera.js', RCS_PLUGIN_MAIN_FILE), array('jquery', 'jquery-mobile', 'jquery-effects-core'));
 	wp_enqueue_script('rcs-client-js', plugins_url('js/client.js', RCS_PLUGIN_MAIN_FILE));
 }
 //---------------------------------------------------
@@ -143,7 +196,8 @@ function rcs_set_settings(){
 					'indexing_style' => 'pagination', 'pause_on_hover' => 0, 'loader' => 'pie', 'loader_color' => 'eeeeee',
 					'loader_bg_color' => '222222', 'navigation' => 0, 'navigation_on_hover' => 0, 'play_pause' => 0,
 					'pause_on_click' => 0, 'time' => 7, 'transition_period' => 1.5, 'bar_position' => 'bottom',
-					'bar_direction' => 'leftToRight', 'thumbnail_size' => 'medium', 'watermark_id' => NULL, 'auto_advance' => 1);
+					'bar_direction' => 'leftToRight', 'thumbnail_size' => 'medium', 'watermark_id' => NULL, 'auto_advance' => 1,
+					'watermark_alignment' => 'topRight');
 					
 	$options = array('version' => '1.0', 'default_options' => $defaults);
 	if(get_option('rcs_slider_settings') === false){
@@ -370,7 +424,8 @@ function rcs_save_slider($post_id){
 		$options['pause_on_hover'] = (isset($options['pause_on_hover']))? $options['pause_on_hover'] : 0;
 		$options['pause_on_click'] = (isset($options['pause_on_click']))? $options['pause_on_click'] : 0;
 		$options['auto_advance'] = (isset($options['auto_advance']))? $options['auto_advance'] : 0;
-	
+		$options['watermark_alignment'] = (isset($options['watermark_alignment']))? $options['watermark_alignment'] : $defaults['watermark_alignment'];
+		
 		if(isset($options['watermark_id']) && !empty($options['watermark_id'])){
 			$img = wp_get_attachment_image_src($options['watermark_id'], 'large');
 			if(!$img[3]){
@@ -428,7 +483,7 @@ function rcs_save_image_slide($post_id, $slide, $sliderOptions){
 	$image_info = NULL;
 	if($slide['image_id'] > 0){
 		try{
-			$attch = new RC_Attachment($slide['image_id'], $sliderOptions['height'], $sliderOptions['watermark_id']);
+			$attch = new RC_Attachment($slide['image_id'], $sliderOptions['height'], $sliderOptions['watermark_id'], $sliderOptions['watermark_alignment']);
 			$image_info = $attch->generateOtherSizes();
 		} catch(Exception $e){
 		}
@@ -1025,6 +1080,22 @@ function rcs_IEgradientSupport(){
 			}
 		</style>
 		<![endif]-->';
+}
+//---------------------------------------------------
+/**
+ * removes unwanted meta boxes from rc_slider edit page
+ *
+ * @return void
+ */
+function rcs_remove_unwanted_meta_boxes(){
+	global $wp_meta_boxes;
+	if(function_exists('get_current_screen')){
+		$screen = get_current_screen();
+		if($screen->post_type == 'rc_slider'){
+			foreach($wp_meta_boxes as $key => $screen){
+			}
+		}
+	}
 }
 //---------------------------------------------------
 ?>
