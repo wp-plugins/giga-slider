@@ -51,25 +51,44 @@ function rcs_admin_styles_scripts(){
 			wp_enqueue_script('jquery');
 		}
 		
-		$cam_dep = array('jquery', 'jquery-mobile');
-		if(!in_array('jquery-effects-core', $queuedScripts)){
-			wp_enqueue_script('jquery-easing', plugins_url('lib/camera/scripts/jquery.easing.1.3.js', RCS_PLUGIN_MAIN_FILE), array('jquery'));
-			$cam_dep[] = 'jquery-easing';
-		} else{
-			$cam_dep[] = 'jquery-effects-core';
+		if(!in_array('jquery-ui', $queuedScripts)){
+			if(!in_array('jquery-effects-core', $queuedScripts)){
+				wp_enqueue_script('jquery-effects-core');
+			}
+			
+			if(!in_array('jquery-ui-core', $queuedScripts)){
+				wp_enqueue_script('jquery-ui-core');
+			}
+			
+			if(!in_array('jquery-ui-widget', $queuedScripts)){
+				wp_enqueue_script('jquery-ui-widget');
+			}
+			
+			if(!in_array('jquery-ui-mouse', $queuedScripts)){
+				wp_enqueue_script('jquery-ui-mouse');
+			}
+			
+			if(!in_array('jquery-ui-slider', $queuedScripts)){
+				wp_enqueue_script('jquery-ui-slider');
+			}
+			
+			if(!in_array('jquery-ui-sortable', $queuedScripts)){
+				wp_enqueue_script('jquery-ui-sortable');
+			}
 		}
 		
-		if(!in_array('jquery-ui-slider', $queuedScripts)){
-			wp_enqueue_script('jquery-ui-slider');
-		}
-		
-		wp_enqueue_script('jquery-ui-sortable');
 		wp_enqueue_script('jquery-mobile', plugins_url('lib/camera/scripts/jquery.mobile.customized.min.js', RCS_PLUGIN_MAIN_FILE), array('jquery'));
-		wp_enqueue_script('camera-js', plugins_url('lib/camera/scripts/camera.js', RCS_PLUGIN_MAIN_FILE), $cam_dep);
+		wp_enqueue_script('camera-js', plugins_url('lib/camera/scripts/camera.js', RCS_PLUGIN_MAIN_FILE), array('jquery', 'jquery-mobile', 'jquery-effects-core'));
 		wp_enqueue_script('colpick-js', plugins_url('lib/colpick-jQuery-Color-Picker/js/colpick.js', RCS_PLUGIN_MAIN_FILE));
 		wp_enqueue_script('rcs-admin-js', plugins_url('js/admin.js', RCS_PLUGIN_MAIN_FILE));
-		wp_enqueue_script('media-upload');
-		wp_enqueue_script('thickbox');
+		
+		if(!in_array('media-upload', $queuedScripts)){
+			wp_enqueue_script('media-upload');
+		}
+		if(!in_array('thickbox', $queuedScripts)){
+			wp_enqueue_script('thickbox');
+		}
+		
 		wp_enqueue_media();
 		//wp_deregister_script('autosave');
 	}

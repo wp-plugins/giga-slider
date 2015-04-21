@@ -6,6 +6,9 @@
 #misc-publishing-actions, #minor-publishing-actions {
 	display:none;
 }
+.image_holder img{
+width:80% !important
+}
 .form-group{
 	padding: 10px 5px;
 	border-bottom: solid 1px #DDDDDD;
