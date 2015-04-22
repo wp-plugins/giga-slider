@@ -1,10 +1,10 @@
 === GIGA Slider ===
 
 Contributors: wp-buy
-Tags: slider, post slider,carousel slider,video slider,slideshow,image slider,responsive slider,slideshow widget, GIGA slider, youtube slider
+Tags: slider, post slider,carousel slider,video slider,slideshow,image slider,responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, free slider, wp slider, slider plugin
 Donate link: http://goo.gl/UJVpbi
 Requires at least: 3.9
-Tested up to: 4.1.1
+Tested up to: 4.1.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -59,6 +59,7 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 
 1. Main interface screen
 2. create new slider screen (options page)
+3. sliders samples
 
 == Changelog ==
 
