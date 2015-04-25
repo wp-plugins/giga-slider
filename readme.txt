@@ -17,6 +17,36 @@ GIGA Slider is a quick and useful wordpress plugin to add a custom sliders to yo
 for every slider with a title and description for each slide.
 GIGA Slider is a great way to create stunning image slider and video slider for your WordPress website. The plugin supports images, YouTube, Vimeo and webm videos. It's fully responsive, works on iPhone, iPad, Android, Firefox, Chrome, Safari, Opera and Internet Explorer
 
+
+<h3><strong>GIGA Slider Basic Version Includes: </strong></h3>
+- Fully responsive & multiple layouts support
+- Build dynamic sliders from WordPress posts and pages
+- Can have fixed layout
+- Unlimited layers with image, video, audio, text or custom HTML content
+- 32 skin type to set
+- Ability to link images to any website or URL
+- Feature to open link in either same or new window
+- Option to enable or disable pagination
+- Option to set pagination types to either images or buttons
+- Option to set height and width of the pagination thumbnail
+- more than 25 transition effects
+- Option to set time and transition period of the slideshow
+- Option to set Caption for each image
+- Auto-start slideshow (can be disabled)
+- Pause slideshow on hover feature
+- Option for fade in the first slide without animating the layers
+- Option for disabling prev / next buttons or bullets
+- Option for customizing the thumbnail area and the size of thumbnails
+- Easy to use with YouTube & Vimeo videos
+- Auto-pause slideshow while videos or audios are playing
+- Auto-play videos and audios (optional)
+- YouTube & Vimeo thumbnail images
+- Option for adding a fixed image over the slider (logo)
+- Uses minified CSS, JavaScripts and jQuery files. Lazy loading keeps the initial amount small
+- Working in Chrome, Firefox, Safari, IE7-11, Opera
+- SEO friendly
+- shortcode supported
+
 == Installation ==
 
 1. Download the package.
