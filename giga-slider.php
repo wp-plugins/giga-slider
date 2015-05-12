@@ -4,7 +4,7 @@
  * Description: Responsive Slider for your wordpress blog
  * Author: wp-buy
  * Author URI: https://www.wp-buy.com/
- * Version: 1.0.0.1
+ * Version: 1.0.0.2
  * License: GPL2
  */
  
