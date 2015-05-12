@@ -1,7 +1,7 @@
 === GIGA Slider ===
 
 Contributors: wp-buy
-Tags: slider, post slider,carousel slider,video slider,slideshow, responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, wp slider, carousel slider, content slider, content slideshow, flex slider, free video slider, Horizontal slider, HTML5 slider, Image Rotator, image slider, image slideshow, jquery slider, jquery slideshow, camera slider, picture slider, posts slider, recent post slider, slide, slide show, slider shortcode, wp slider, youtube slider, youtube slideshow, vertical slides, video slider, video slideshow, vimeo slideshow
+Tags: slider, post slider,carousel slider,video slider,slideshow, responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, wp slider, carousel slider, content slider, content slideshow, Image Rotator, image slider, image slideshow, jquery slider, jquery slideshow, camera slider, picture slider, posts slider, recent post slider, slide show, slider shortcode, wp slider, youtube slider, youtube slideshow, video slider, video slideshow, vimeo slideshow
 Donate link: http://goo.gl/UJVpbi
 Requires at least: 3.9
 Tested up to: 4.2.2
@@ -9,7 +9,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-GIGA slider is an awesome WordPress slider plug-in with a lot of nice features. Just install and build your sliders in a few minutes.
+GIGA slider is an awesome WordPress slider plug-in with a lot of nice features. Just install it and build your sliders in a few minutes.
 
 == Description ==
 
