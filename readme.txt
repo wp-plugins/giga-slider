@@ -1,10 +1,10 @@
 === GIGA Slider ===
 
 Contributors: wp-buy
-Tags: slider, post slider,carousel slider,video slider,slideshow,image slider,responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, free slider, wp slider, slider plugin
+Tags: slider, post slider,carousel slider,video slider,slideshow,image slider,responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, free slider, wp slider, slider plugin,3D slider, best slider plugin, carousel, carousel slider, coin slider, coinslider, content slider, content slideshow, custom video slider, featured-content-slider, flex slider, free video slider, free video slideshow, Horizontal slider, HTML5 slider, image, Image Rotator, image slider, image slideshow, images, javascript slider, javascript slideshow, jquery slider, jquery slideshow, camera slider, nivoslider, Photo Slider, picture slider, posts slider, recent post slider, responsive slider, responsive slideshow, seo, slide, slide show, slider, slider plugin, slider shortcode, slider widget, slides, slideshow, slideshow plugin, wordpress slider, wordpress slideshow, wp slider, youtube slider, youtube slideshow, vertical slides, video slider, video slideshow, vimeo slideshow, vimeo slider, widget slider, widget slideshow
 Donate link: http://goo.gl/UJVpbi
 Requires at least: 3.9
-Tested up to: 4.1.2
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
