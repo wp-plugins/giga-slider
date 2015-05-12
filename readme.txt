@@ -1,7 +1,7 @@
 === GIGA Slider ===
 
 Contributors: wp-buy
-Tags: slider, post slider,carousel slider,video slider,slideshow,image slider,responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, free slider, wp slider, slider plugin,3D slider, best slider plugin, carousel, carousel slider, coin slider, coinslider, content slider, content slideshow, custom video slider, featured-content-slider, flex slider, free video slider, free video slideshow, Horizontal slider, HTML5 slider, image, Image Rotator, image slider, image slideshow, images, javascript slider, javascript slideshow, jquery slider, jquery slideshow, camera slider, nivoslider, Photo Slider, picture slider, posts slider, recent post slider, responsive slider, responsive slideshow, seo, slide, slide show, slider, slider plugin, slider shortcode, slider widget, slides, slideshow, slideshow plugin, wordpress slider, wordpress slideshow, wp slider, youtube slider, youtube slideshow, vertical slides, video slider, video slideshow, vimeo slideshow, vimeo slider, widget slider, widget slideshow
+Tags: slider, post slider,carousel slider,video slider,slideshow, responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, wp slider, carousel slider, content slider, content slideshow, flex slider, free video slider, Horizontal slider, HTML5 slider, Image Rotator, image slider, image slideshow, jquery slider, jquery slideshow, camera slider, picture slider, posts slider, recent post slider, slide, slide show, slider shortcode, wp slider, youtube slider, youtube slideshow, vertical slides, video slider, video slideshow, vimeo slideshow
 Donate link: http://goo.gl/UJVpbi
 Requires at least: 3.9
 Tested up to: 4.2.2
@@ -51,7 +51,9 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 - Unlimited layers with image, video, audio, text or custom HTML content
 - more than 60 transition effects
 - Option to set Caption for each image
-
+- Ability to change font size of Slider Title and Description
+- Full Design Management
+- Support upon request in 24 hours
 
 == Installation ==
 
