@@ -1,4 +1,4 @@
-=== GIGA Slider ===
+=== Responsive Media Slideshow - GIGA Slider ===
 
 Contributors: wp-buy
 Tags: slider, post slider,carousel slider,video slider,slideshow, responsive slider,slideshow widget, GIGA slider, youtube slider,gallery, photo albums, wp slider, carousel slider, content slider, content slideshow, Image Rotator, image slider, image slideshow, jquery slider, jquery slideshow, camera slider, picture slider, posts slider, recent post slider, slide show, slider shortcode, wp slider, youtube slider, youtube slideshow, video slider, video slideshow, vimeo slideshow

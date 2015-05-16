@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: GIGA Slider
+ * Plugin Name: Responsive Media Slideshow - GIGA Slider
  * Description: Responsive Slider for your wordpress blog
  * Author: wp-buy
  * Author URI: https://www.wp-buy.com/
