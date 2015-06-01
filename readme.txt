@@ -31,7 +31,7 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 - Option to set time and transition period of the slideshow
 - Auto-start slideshow (can be disabled)
 - Pause slideshow on hover feature
-- Option for fade in the first slide without animating the layers
+- Possibility to add slider in widgets right from widgets admin panel
 - Option for disabling prev / next buttons or bullets
 - Option for customizing the thumbnail area and the size of thumbnails
 - Option for adding a fixed image over the slider (logo)
@@ -48,6 +48,7 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 - Easy to use with YouTube & Vimeo videos
 - Auto-pause slideshow while videos or audios are playing
 - Auto-play videos and audios (optional)
+- Option for fade in the first slide without animating the layers
 - Unlimited layers with image, video, audio, text or custom HTML content
 - more than 60 transition effects
 - Option to set Caption for each image

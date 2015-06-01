@@ -1,6 +1,8 @@
 <?php
 $captionClasses = rcs_get_caption_example_options();
 ?>
+<div style=" color:#090; padding:10px; -webkit-border-radius: 10px;
+-moz-border-radius: 10px; border-radius: 10px; font-size:15px; margin-bottom:20px">&nbsp;<b style="color:#C00">limited time offer!</b><br  /><br  />If you want to add youtube & vimeo videos, links, caption text and new effects please <a href="http://www.wp-buy.com/product/giga-slider-pro" target="_blank">upgrade to the pro</a> version and save 40%, The premium version of GIGA Slider is completely different from the free version as there are a lot more features included</div>
 <ul id="sortable-slides">
 	<?php
 	$i = 0;
@@ -45,8 +47,7 @@ $captionClasses = rcs_get_caption_example_options();
 		$disld = ($default_effects);
 	?>
 	<li id="slide_element_<?php echo $i ?>">
-    <div style="background:#FFFFAE; color:#F00; padding:10px; -webkit-border-radius: 10px;
--moz-border-radius: 10px; border-radius: 10px; font-size:15px; margin-bottom:20px">&nbsp;If you want to add youtube & vimeo videos, links, caption text and new effects please <a href="http://www.wp-buy.com/product/giga-slider-pro" target="_blank">upgrade to the pro</a> version and save 40%</div>
+    
 		<div class="collapsible-panel">
 			<div class="header"><span class="icon <?php echo $iconClass ?> colapsingToggle">&nbsp;</span><span class="colapsingToggle"><?php echo $title ?></span>
 			<span class="delete" onclick="rcs_removeSlide(<?php echo $i ?>, event)">&nbsp;</span></div>

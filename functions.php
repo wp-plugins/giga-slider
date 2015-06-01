@@ -651,7 +651,7 @@ function rcs_render_by_shortcode($atts){
  * @return void
  */
 function rcs_register_slider_widget(){
-	register_widget('RCS_Slider_Widget');
+	//register_widget('RCS_Slider_Widget');
 }
 //---------------------------------------------------
 /**
