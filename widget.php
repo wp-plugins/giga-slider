@@ -6,8 +6,8 @@
 	function RCS_Slider_Widget(){
 		$w_options = array(
 			'classname' => 'RCS_Slider_Widget',
-			'description' => 'Display RC Slider',
-			'name' => 'RC Slider'
+			'description' => 'Display GIGA Slider',
+			'name' => 'GIGA Slider'
 		);
 		$this->WP_Widget('rcs_slider_widget', '', $w_options);
 	}
