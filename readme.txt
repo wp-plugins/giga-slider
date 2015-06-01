@@ -87,6 +87,7 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 - Auto-pause slideshow while videos or audios are playing
 - Auto-play videos and audios (optional)
 - YouTube & Vimeo thumbnail images
+- Possibility to add slider in widgets right from widgets admin panel
 - Option for adding a fixed image over the slider (logo)
 - Uses minified CSS, JavaScripts and jQuery files. Lazy loading keeps the initial amount small
 - Working in Chrome, Firefox, Safari, IE7-11, Opera
@@ -97,7 +98,8 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 
 1. Main interface screen
 2. create new slider screen (options page)
-3. sliders samples
+3. Possibility to add slider in widgets right from widgets admin panel
+4. sliders samples
 
 == Changelog ==
 
