@@ -97,10 +97,10 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 
 == Screenshots ==
 
-1. Main interface screen
+1. sliders samples
 2. create new slider screen (options page)
 3. Possibility to add slider in widgets right from widgets admin panel
-4. sliders samples
+4. Main interface screen
 
 == Changelog ==
 
