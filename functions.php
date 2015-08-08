@@ -1098,4 +1098,28 @@ function rcs_remove_unwanted_meta_boxes(){
 	}
 }
 //---------------------------------------------------
+
+
+function after_plugin_row($plugin_name = null)
+{
+	
+		echo '<tr id="giga-slider-plugin-update-tr" class="plugin-update-tr">';
+		echo '<td colspan="3" class="plugin-update">';
+		echo '<div class="update-message" style="background:#FFFF99" >';
+
+		echo 'You are running giga slider LITE. To get more features, you can <a href="http://www.wp-buy.com/product/giga-slider-pro" target="_blank"><strong>upgrade now</strong></a>.';
+
+		echo '</div>';
+		echo '</td>';
+		echo '</tr>';
+		?>
+		<script type="text/javascript">
+		jQuery(document).ready(function() {
+			var row = jQuery('#giga-slider-plugin-update-tr').closest('tr').prev();
+			jQuery(row).addClass('update');
+		});
+		</script>
+		
+		<?php
+}
 ?>

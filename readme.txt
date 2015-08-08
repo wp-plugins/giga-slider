@@ -103,9 +103,14 @@ GIGA Slider is a great way to create stunning image slider and video slider for 
 4. Main interface screen
 
 == Changelog ==
+=1.0.0.4=
+1. adding upload logo feature
+
+=1.0.0.3=
+1. Bug fixing & adding new options
 
 =1.0.0.2=
-1. Bug fixing & stylesheet upgrade
+1. Bug fixing & layout change
 
 =1.0.0.1=
 1. Initial version
