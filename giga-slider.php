@@ -33,6 +33,6 @@ add_action('wp_ajax_RCS_GET_MEDIUM_IMG_I', 'rcs_get_medium_image');
 add_action('wp_ajax_RCS_GET_LARGE_IMG_I', 'rcs_get_large_image');
 add_action('wp_ajax_RCS_SET_VIMEO_THUMBNAILS', 'rcs_set_vimeo_thumbnails');
 add_action('wp_head', 'rcs_IEgradientSupport');
-add_action('after_plugin_row_giga-slider/giga-slider.php', 'after_plugin_row', 10, 2);
+add_action('after_plugin_row_giga-slider/giga-slider.php', 'rcs_after_plugin_row', 10, 2);
 
 ?>

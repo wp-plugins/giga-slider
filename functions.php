@@ -1100,7 +1100,7 @@ function rcs_remove_unwanted_meta_boxes(){
 //---------------------------------------------------
 
 
-function after_plugin_row($plugin_name = null)
+function rcs_after_plugin_row($plugin_name = null)
 {
 	
 		echo '<tr id="giga-slider-plugin-update-tr" class="plugin-update-tr">';
